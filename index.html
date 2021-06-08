@@ -1,458 +1,93 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-  <head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdullah's personal page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: url(https://digitalsynopsis.com/wp-content/uploads/2017/02/beautiful-color-gradients-backgrounds-166-deep-relief.png); background-size: 100% 100%;">
+  <div id="navbar">
+    <div id="logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEUAAAD////+/v77+/sEBAT4+Pjt7e1zc3MmJiZQUFA/Pz/09PTs7OwyMjLx8fHk5ORVVVUdHR2Pj4+bm5ve3t45OTnDw8NkZGRJSUmrq6u8vLzQ0NCxsbGlpaWGhoa9vb0qKipdXV3MzMwVFRV3d3eJiYmenp5tbW0ZGRmvIQraAAAT/klEQVR4nO1dh5bqOBK1gsnYBANuoGlSN+//v3AlmaCSJVnBhN2zdWbmvHk46KpKlVQqJ+h/nZJ3D+Dp9H+E//30XISY/YMJSRkRla5/h6vLnkfPRIg5Aul/JSDSHznKZ8J8DkKMOev4n9J8+f17PkzKcgCpLCer8+/XMReXcZT4OSjbR4gFPPaH4eb73B//o4mN6HS8mi/zFF1Rto+xZYSYCHTp8Ljr9yQcenr83pvMjhm5Tk+7Q2oTYSWY6Wgzn0wlbHYePn7/N5lvRimTVHnxxlN7CDFXi2nxtZraEDVQb7UtyPVZLVFbCAlbSbjYrirGBOIT950u24I9MG0LYzsIuVxl6+5UiF0EC68oe+efIWpLWFtAKJZfMS9bgFdh5A/p/xUtYYxGyPHh7aqXhAunBiT7d3/5YRhxtI2MQoi5T4bS7/I2qvZIPK3/RRCJtR5xCBk+8rVIWhJPBSN/5GCNY/kYgZDb5nS7SNpmH8RYLlMU5QWEIqxcl/XiOdgACYzhOicQoZDPZV/M9PMxHo5M57wUoVgbxfn50O60G3HTESSrYQi5guk1j6tFWmxxIBv9EQoGLg8vEc87sXddNmFaNYCHzALuXonuRqdZEBv9EPI5JGgzeC0DK2Jv7BccoicbPXnILdP8HQysIE5/kLdp9OQhQaPDe/BdMV4yRPwcAC+E7MnL6TskVKLxBvllOnwQsjU4fye4K31xXeAO0QMhQcPuu9EJ2qUcoitGd4QM4OG9Anonvhidx+2MkKBj/0MA0qTcuAuqK0KCtu8G9iCaTJfOEB0Qcs0lAH4GBzmxkayRY8bRhYcc4PcnARS0dkxwOPLw7+MAJsm3mwPnhJC8MhR0JDbhM5EKi0fIPLXfd8Mx0J+LumlGKNbgh9LWAWIDQvzRAJ0g2hFygH/vRmGlbWPg38DDjzL0Wmo0/TaEIp4/fZ6ZANQrGiBaeUhQvvhwgMxH7djdcDsPR+W7ETjQYWi1imaEvKLiEvbO8ty9UfOWd+9+7XkQ8jKa7KwbGzaEKCiiZ45/8ZCCc4OU0+T3toowOtKwNfFlW4pGhDwnE/I2NsYJutV4pc2qmC4fV+MycNUfLbrGgjDfB72Nu8Tk/pDhwDpopigeeoKgWeAbxx2zUTQgZGsQT4JeRpP98LEqUrRruH7+iPOYZgvdDLmY5dTEw/D5TFYofcyU3aCyNTuSlESKwmY1keXGESFBx9B3MUcKDNpucA7SdLC3BmcrT4XJZGgRsmsz+/qxUG8opRdwk+O+BnNPRqewlzL1hg1yquchQeEx7w4kUDDJbCZxnMoA2SADLXDC4+G0hsOEkL1oGZ61KKD5tQ/6F05HqIUSK3qjX4pahCidBAMsU5ADY4O2regCLh5MhvvA91Km4bTZtzpCXoQQHBNSptTga9igx8bLSwIHxdg/C3f1t1qIGh4SVASud0Y0xypCpiD1gxbToVyNiuA3J/tcp091PExXofNIk3MtiWkbdFG7GKfB+5PMBScaJmoQBq92Tsuaymba1BQzHNI6QubJhkekG43BqCHE2DggB1qM6gqNm0TdoCkzhrUBEZz/C399fcrqCNkF4ZkZyoxSXWMTXOi50strV3NLs4uoMa6LUB1huL7mtNQgZMq5qxm0iAzrQkXQT8T7VeWs5WF4epSFQiPNoJk2XWuvP+pMNEG52bo0U71YAyJktj7dBz9dL6TXQatMpEm/o3UkSYSYMkVQY2KiPj6mFoFqHScsQrE6wrnWQFcuYzh9qU9VeEg64QV5NLkYMkLaWOxfofcjMR6G+4waJkKEaXjcy+nb4N4LOw4HTXlYrp0OnEbJUY2JAGFjWsVGNBlrvaZq5uqe7pdhOrjX2IsYRamIRgKfHbHPxDw205j57sBUuXhfGBIrfNkGu43XHX4LwvCKGcrzgqZcCVafbBZSFLkdREGeSEHIFEL4PgwTD6ncHGOYh64HZDDUgdvVJA3fLhHSIc+0hBDHWSKYRsBw0Bjle+nZNFmkSmQo/08akURJeIJSZqKMEI1idppO0LHHMIxKlbWlrFkl1A/O7ydCmIbySCSEBH0Fw2NUgjMRBP/m4DyznPqhynRgtIY6npC6E+RBQNc8EDIHOVyFJVVhhMTBDvuLB2d4+bt8+qQELEzRZIxTMB9NqXILMaUu64BEeuom/KlMSEdARpk8lOAkKKxZ+YMsy3q0QOB2Q8DlRlNZ18gI9YGqIx3AmFPU5ykbOOjHxaeOrIVEVuEXiADfhoqgrQ4hRlno3pagJVSdPJk1Vwbdv198gb8wLQT9SYxjdAIziVKsf0cYKaT7IWQhF0ngP7FXPqLEDTR/GXf3f+A6zsLzfQlPcd0fljwGYEr6OZCIDMGi40KmKEyS3TIwcDquvuIFmFOCIyquqbw7dEdIhv3mW81UQA9mI8Ds4KDJLVEIU44p9+iY3z7EwICEb34xupCalGKSxzxxMoRj5kEYTQapvB/0ENOjLKQslJgK6dlCoc5izjZOR6TGQ1zECCnYM2TcupaEb5W1VYXXg6Fsr64xKU26COqaKNWe16U0ZhkmpxwK6ZJWg4Y6ExOezFBy+bfpqMJL+SHB+X045cntPZb9k+bnXVKkMe5iJ0GKN27qGvj+t+lIlBQBs14xyYzHFlhym96oZaguobtlBYMmOOPsuih65je5cnxFAG+jxPQ0IgoPo2oQxznkyk2jUCXNzn17Cv1igkb3xAlI1eG4LbBH9ju5vSh8e5mXXcmxr1wIRY8QTtFLFobpUPOL7EG6VLkr3b3AK8IUx+jmpTwyBmP/GPSf4tecRdZYvvqeShVlhoDjMXLVx6mMEOPQIgiRvM6gfVtLgeAqhbUnW7i1QWD5I+A4jqr9vJeEXBEadhbcCGQN1A1WdW3NFCGVEtxVlaH8Y0xW5eYyJtdnBR84oLxKVx4WLsCvMMCAfctqe2nTHAP4EZmxe5WUQFjFL6EIVwj6ZnATd9HBNYjSdORT8CwQYDCeR5jEs4yQSVl4rltUd8pCqmhl7R7a7WL0I79X5B+k36Py+/3r2ql4iDuheXTmbGWwfiZXfq/XLsjTocgOKOTDogI0dFwLGaEQ+FDqQj1T90RGxuS2Oh3V1j5weEKTY0w9ZNV7rwgjLA9wUTBJlQSLEncoQlqbjgmBwXH4eRZ6zask1VSFbqpRWHuHMa5HBH1ikFM2HfWyD1hxhCP2M6/K9IqwrVJEbeFtrS7oPh+aAAlYFxSh5JnflkoIw3PBcJNMWwbwi/QItXnfMYE7NuHJjAtAGHxMu5Rz1YZCxAHW7yumRFebBOvuUxIYt7K4BiAMTpV+KUKlC1F4PrvORe2aTWo5N02RgxPRm0G8Igw1+HQE/Bmcae3XTmv0DZsT+wzm3AKTGfS2N1JZCxyKsIs1mc/au8apziQSgwB+Q/NDQk9FDKqxRSLc4GYDXd9av07Hj77U+qC4ED9BY6N8n+DBw1ApXWTQEGSGgA6srft0aNMKjOMgDmaha1BDVLHNHIuQh0YwKNdvp7BB1+vdMMpMu6DfSsAVFCXeHeY4Hm5q5tnwmL9a5YWxsoWrebCbzILkMISVLEQhLDMYkhd7Q09kZdDV1SvTxfBcAcGjEJPYBkIlzWT3btVaG3HC2EQ7KKZBJpFLKYqVUlpAvY5m5aSvp1LRpuzin9Jw7aT8VWpxQjw3wcM4hDTpgpjB2oq7fijJdopePYQRUqzYCg+3iuSJVvNYQ5rwCVdd97XXKkoJB5XBxPOQ8rp8WIpgZorGL7VerB6dKvyjxHhrQZXI8JlEkH9+vwV7SJcvROifZYm2FvzEdqvt7y2EQyp7haaJs4dzja/5LGo+MK1BCPxS79hCOB4vklEUlO68F3gGI1TLqZ9LOPUf4QDLuTZ/Kf17oZCGiCmM8QPyNL2O2YF5AolCOa8hqnka71zb6qUsrIboRWquzbtGX40VdM7anYzjtt4Fa6p9PTeq5Et9y+TgOXqPoXrcBd1v+7l+He3kXJv3BshMqZpIR5w6GmJ/beoBhFFmuauTYpgi8dp5eKS/HrtrXmKaKzuZu2nPSNO5Oatvuw0c9WNP8Kp/ZQY7l/aeMMr/eSHsg4JeRIZW39/UH6ehPmIMPsKC+TETd6LJPpX2DzEfog9CuI/Z0Nx0oM0Hi1Iz+8wslejMZykpe8C+Jv80UoTUsgVGky+TqsG8g4KFwO5yfcO4gfoKQo9z/mrtnXLip0a5UZtaNyUYFzKYGh565fe7oNrE6wSHWhNirZjglZmWSgV76bVS5SHq/pzpT0aITKet9dTLlRIZa6LIfGavoYOCmmXFpnP92nvv+u1W15Z73KzW5S9t9y5A/YgCkaDcbMdpcoJ1bhg3dX+TaJqBuja/rVY1l2/ZV+DTYUbIHZeGm+UdZq9T3vczSff6UteKAJpMMuhr2CsIlQPsmCiGxjLoejnmyF3l3/Pm9xph1xPAVD2VZcsSsaUE6vLZdMyV2kT7oNfAYPhsed9N9q36Ur+nriNwMAyL9pEWOVOLR7ZMETsPmiZdHJjfp7U6b9dafSpq/mSuWN1F2GVBLDu1htS6tk6Fcr9rWYxaq1/1H3EjmMu3VtTz8nso0UVPOYiM0dCSX6BK/wDduX79fQ8Fd0co1S5bbx1kcGHZPwnxp4gkN3/w6EJqF9OVUuyv6SGive+RCfQ89ySEFHLFdjE8BnPdRDoM4aA3U9ugC0VkLKteopPu3FPmdmoTliJi266o2mXhtmad98YrVaWe2HAhifXS+UMHTcyEFH6HGnesCuqnNh1UdQKaBj3uQC9/5CCmfPnWEDYpxRvBI4W8js0y/wMlhr2WUu47wAZgY1GGIHCUz1SjopIk2xLCkUOPL/VYKLa6Qr/a2h8em8Dw0pqBWSllV82eG3O7pJ4D0nl8l/N5fZ+gdAr1zKN+Sy0E3lg7KOTAseXBeiNC2cbIp9UdHAblJKXdPE3gdJDObXeFdgj0N61Kbt5co6vQSXsen428uSDgHpJcx2w/LQV9A/l43BaIaUNzqgWBHUWaAj0lBwH6YjR638qZULtyOoEifSz32y1BTW1ThSXI1WGHZsNbWXgAwsbTDRulgsDq6R0wrGeWYYAD+TglVjG91BSWjZgKBzEX7MDTUCMH84K4oQPJUjF7cirorAiw3SQqrXjtOUglblYQWvMRdf/CUCBaEeiYDOtlRbpWZgsZmZ+jlqeKAMU2SqXdroyQ6Ub7LhsUUqvxpclOCe1grks5OWwPMuFWnr1+vzppZkDYpNRK2WVmf8ytifJC0ZcwI6sWAlsGTXmTTPDmbG8b5taCkLmZ5pwLcPZQ48Gyfgr9yUKOIMT3E4BltQfgsAUVxjbfZCAvQhWhfbucFjBNajscqJ52qldmQo8O4T/bw/pKlGizUmoVjMJDbMxf8pwJdESOtiV7Us4vKdNBkzKFQmw3iSCtjM1hN/9ugZKAVjtDWo7Lru8foqg+XWHNdHbla9nFy9oG5Q94HBlao8Sz8m5zfh+mvmoIeTccExP7QzAXDa3PNnDmal69iBLBFdaYoQeceMRfrie+a2hbh1UjHj0NHh+PER+FsfpOpwu8uqt6S0xBXuDzVlZno688z6SYoDbU8ZBFABG9mN9Oais/HUKMP/k7a020rRfyavp5d0JPF7+fBsP6hroG4cd/as1My9oq1HWdJzji2w/vJL7d7NRXP7bN1vuIJy/cEBL8CZ/f9qdao2sTQuYUpJ/y+WZ38vhGCfItXPgUMpREaL8zg103QD6JmOuqLWsxfe8puOXGe4jyLjH6sh39956MnzP4XDqaPmJtQOhbzvl20n+VwYKQQdR05fhcMn6TzPx1QAYyqmPra+mUe3//ELlvt34CrTX+aCNCrPbh+mCaqR223HjI7smi2tK+iNR6DXeEsD/gxxJNBppvTLkh5CajCOrY8EKiybgwWcJmHmKnXfO3ErX2g3NA2LST8QFk/dpxE8KbQv1kqiWAPREKjMFNI19A9Y4i3gi5BHwuF2d2AXVDiMI/sf502llcGQ+EfKsnvC3cM8nSc9IPIS9Eimjj/zTaERcWOiG8Fll+ko9KE/GRFweAbjzEojHcB0GkoplUewiRddftDUTVXn/xCHnMj7Yx35Zsl3o/zgA9eEhQHtFsuEWiSd/w6cQYhJxSlIc1+GubVh2fjhUeCPnRg09IwM1Sr5YcHgjFx+Lenrs5reuH/FpDKKxGMXir2ejnvp2NfKQUVZXE5zdB5C91NfPhCKtd8PE7MLI3LkRrqicjxFynjliwQV+PsZuFdP3x5iHiOhVtX7wa2bv6W4QDAIYg5O3yUCfqw8H+AE9/w8DmaSE8RKKz4XHyKjayt6w2YQwMRijYONzuXwKQaZh1Gt79LpCHSKzGznyaPJ+R++8MRTQWC0WIq1RjNjs9ESN/7nQ+9LeBbSCsYLI3j3b89MMzbAd/5H42tOfsn4zwhnHcPkbxuMUsi8UXjRAJtdqZr2jSprDyJ/1b/WXBCrRNhBiJU1rL874tjIJ9490GtYGvDR4iPhIGsvia3KY/Ch//z+Er591IIuWzolYQIn6sCaHsOBvEgRR3lvNNWj2wFWoL4XVIo+Ns8RirF7TqjsFsw1s4t9jdtjWEWJRtsj9kxbq7v4+88Rvpkg4en9c5h4f9QyQLtcdDTtx48LTcsLM9jKVjTiZ6XDG+rPMhFsnnlptqtosQiQiZN+VmiiJf7w6LaZO40mnZnS9HRLBOdEtsF2D7CCuqQLL1NFp+/3YP5WCwGENaDMry0J19HcU32avm5U/p2/skhJwYysdJUTLMZOpk0k/8dP7z+r0+EWFF/CBWmtb7zmPxg+lzXi3S0xHa6TmCCejNCF9A/0f430//AVbN+HumWi8oAAAAAElFTkSuQmCC" width="60" height="60" alt="AVbN+HumWi8oAAAAAElFTkSuQmCC"></div>
+    <div id="nav">
+      <ul>
+        <li><b><a href="https://www.instagram.com/abdul.aqrbawi/">Instegram</a></b></li>
+        <li><b><a href="Resume_Abumazen.docx">Resume</a></b></li>
+        <li><b><a href="mailto:abdullahabumazen.aa@gmail.com">Conctact Me</a></b></li>
+      </ul>
+    </div>
+  </div><br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <center>
+    <h1>Welcome to Abdullah's Personal Page</h1>
+  </center>
+  <center>
+    <img src="me.jpg" alt="me" width="275" height="360">
+  </center>
+  <center>
+    <h2>About me</h2>
+    <p><b>Hey! my name is Abdullah, I am currently stduying computer engineering with a minor in electrical engineering. In my free time i like to get better in coding, do outdoor activities, travel, and just hang out with family and firends. People would usually describe me as genoures, ambitious, adventures, very outgoing, and funny. A day in my life would look something like this:</b> <i>(Note: everyday tasks are differnt for me becuase of my other classes)</i></p>
+    <table border="1">
+      <tr>
+        <th>Time</th>
+        <th>Duty</th>
+      </tr>
+      <tr>
+        <td>@ 8:00 am</td>
+        <td>My day starts</td>
+      </tr>
+      <tr>
+        <td>@ 8:05 am - 8:45am</td>
+        <td>Coffee with a decent breakfast</td>
+      </tr>
+      <tr>
+        <td>@ 8:50 am - 9:40 am</td>
+        <td>Review before class</td>
+      </tr>
+      <tr>
+        <td>@ 9:45 am - 11:30 am</td>
+        <td>Class #1 starts </td>
+      </tr>
+      <tr>
+        <td>@ 11:35 am - 1:30 pm</td>
+        <td>Complete Assignments </td>
+      </tr>
+      <tr>
+        <td>@ 1:30 pm - 3:00 pm</td>
+        <td>Free Time (make lunch) </td>
+      </tr>
+      <tr>
+        <td>@3:05 pm - 6:00 pm</td>
+        <td> Class #2 starts</td>
+      </tr>
+      <tr>
+        <td>@ 6:00 pm - 12:00 am</td>
+        <td>Work + family time</td>
+      </tr>
+      <tr>
+        <td>@ 1:00 am - 3:00 am</td>
+        <td>Complete/review school works (whatever class i need to catch up on)</td>
+      </tr>
+      <tr>
+        <td>@ 3:05 am - 8:00 am</td>
+        <td>My favorite part of the day which is sleeping</td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html><!DOCTYPE html>
+<html lang="">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--  
-    Document Title
-    =============================================
-    -->
-    <title>Summer 2021, CEN4010: Group 07</title>
-    <!--  
-    Favicons
-    =============================================
-    -->
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <!--  
-    Stylesheets
-    =============================================
-    
-    -->
-    <!-- Default stylesheets-->
-    <link href="assets/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Template specific stylesheets-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Volkhov:400i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link href="assets/lib/animate.css/animate.css" rel="stylesheet">
-    <link href="assets/lib/components-font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/lib/et-line-font/et-line-font.css" rel="stylesheet">
-    <link href="assets/lib/flexslider/flexslider.css" rel="stylesheet">
-    <link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">
-    <link href="assets/lib/magnific-popup/dist/magnific-popup.css" rel="stylesheet">
-    <link href="assets/lib/simple-text-rotator/simpletextrotator.css" rel="stylesheet">
-    <!-- Main stylesheet and color file-->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
-  </head>
-  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
-    <main>
-      <div class="page-loader">
-        <div class="loader">Loading...</div>
-      </div>
-      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html">Team 07</a>
-          </div>
-          <!--<div class="collapse navbar-collapse" id="custom-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Home</a>
-                <ul class="dropdown-menu">
-                  <li><a href="index_mp_fullscreen_video_background.html">Default</a></li>
-                  <li><a href="index_op_fullscreen_gradient_overlay.html">One Page</a></li>
-                  <li><a href="index_agency.html">Agency</a></li>
-                  <li><a href="index_portfolio.html">Portfolio</a></li>
-                  <li><a href="index_restaurant.html">Restaurant</a></li>
-                  <li><a href="index_finance.html">Finance</a></li>
-                  <li><a href="index_landing.html">Landing Page</a></li>
-                  <li><a href="index_photography.html">Photography</a></li>
-                  <li><a href="index_shop.html">Shop</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Headers</a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Static Image Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="index_mp_fullscreen_static.html">Fulscreen</a></li>
-                      <li><a href="index_mp_classic_static.html">Classic</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Flexslider Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="index_mp_fullscreen_flexslider.html">Fulscreen</a></li>
-                      <li><a href="index_mp_classic_flexslider.html">Classic</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Video Background Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="index_mp_fullscreen_video_background.html">Fulscreen</a></li>
-                      <li><a href="index_mp_classic_video_background.html">Classic</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Text Rotator Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="index_mp_fullscreen_text_rotator.html">Fulscreen</a></li>
-                      <li><a href="index_mp_classic_text_rotator.html">Classic</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Gradient Overlay Header</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="index_mp_fullscreen_gradient_overlay.html">Fulscreen</a></li>
-                      <li><a href="index_mp_classic_gradient_overlay.html">Classic</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Pages</a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">About</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="about1.html">About 1</a></li>
-                      <li><a href="about2.html">About 2</a></li>
-                      <li><a href="about3.html">About 3</a></li>
-                      <li><a href="about4.html">About 4</a></li>
-                      <li><a href="about5.html">About 5</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Services</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="service1.html">Service 1</a></li>
-                      <li><a href="service2.html">Service 2</a></li>
-                      <li><a href="service3.html">Service 3</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Pricing</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="pricing1.html">Pricing 1</a></li>
-                      <li><a href="pricing2.html">Pricing 2</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Gallery</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="gallery_col_2.html">2 Columns</a></li>
-                      <li><a href="gallery_col_3.html">3 Columns</a></li>
-                      <li><a href="gallery_col_4.html">4 Columns</a></li>
-                      <li><a href="gallery_col_6.html">6 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Contact</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="contact1.html">Contact 1</a></li>
-                      <li><a href="contact2.html">Contact 2</a></li>
-                      <li><a href="contact3.html">Contact 3</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Restaurant menu</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="restaurant_menu1.html">Menu 2 Columns</a></li>
-                      <li><a href="restaurant_menu2.html">Menu 3 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="login_register.html">Login / Register</a></li>
-                  <li><a href="faq.html">FAQ</a></li>
-                  <li><a href="404.html">Page 404</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Portfolio</a>
-                <ul class="dropdown-menu" role="menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Boxed</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="portfolio_boxed_col_2.html">2 Columns</a></li>
-                      <li><a href="portfolio_boxed_col_3.html">3 Columns</a></li>
-                      <li><a href="portfolio_boxed_col_4.html">4 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Boxed - Gutter</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="portfolio_boxed_gutter_col_2.html">2 Columns</a></li>
-                      <li><a href="portfolio_boxed_gutter_col_3.html">3 Columns</a></li>
-                      <li><a href="portfolio_boxed_gutter_col_4.html">4 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Full Width</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="portfolio_full_width_col_2.html">2 Columns</a></li>
-                      <li><a href="portfolio_full_width_col_3.html">3 Columns</a></li>
-                      <li><a href="portfolio_full_width_col_4.html">4 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Full Width - Gutter</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="portfolio_full_width_gutter_col_2.html">2 Columns</a></li>
-                      <li><a href="portfolio_full_width_gutter_col_3.html">3 Columns</a></li>
-                      <li><a href="portfolio_full_width_gutter_col_4.html">4 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Masonry</a>
-                    <ul class="dropdown-menu">
-                      <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Boxed</a>
-                        <ul class="dropdown-menu">
-                          <li><a href="portfolio_masonry_boxed_col_2.html">2 Columns</a></li>
-                          <li><a href="portfolio_masonry_boxed_col_3.html">3 Columns</a></li>
-                          <li><a href="portfolio_masonry_boxed_col_4.html">4 Columns</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Full Width</a>
-                        <ul class="dropdown-menu">
-                          <li><a href="portfolio_masonry_full_width_col_2.html">2 Columns</a></li>
-                          <li><a href="portfolio_masonry_full_width_col_3.html">3 Columns</a></li>
-                          <li><a href="portfolio_masonry_full_width_col_4.html">4 Columns</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Hover Style</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="portfolio_hover_black.html">Black</a></li>
-                      <li><a href="portfolio_hover_gradient.html">Gradient</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Single</a>
-                    <ul class="dropdown-menu">
-                      <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Featured Image</a>
-                        <ul class="dropdown-menu">
-                          <li><a href="portfolio_single_featured_image1.html">Style 1</a></li>
-                          <li><a href="portfolio_single_featured_image2.html">Style 2</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Featured Slider</a>
-                        <ul class="dropdown-menu">
-                          <li><a href="portfolio_single_featured_slider1.html">Style 1</a></li>
-                          <li><a href="portfolio_single_featured_slider2.html">Style 2</a></li>
-                        </ul>
-                      </li>
-                      <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Featured Video</a>
-                        <ul class="dropdown-menu">
-                          <li><a href="portfolio_single_featured_video1.html">Style 1</a></li>
-                          <li><a href="portfolio_single_featured_video2.html">Style 2</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Blog</a>
-                <ul class="dropdown-menu" role="menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Standard</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="blog_standard_left_sidebar.html">Left Sidebar</a></li>
-                      <li><a href="blog_standard_right_sidebar.html">Right Sidebar</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Grid</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="blog_grid_col_2.html">2 Columns</a></li>
-                      <li><a href="blog_grid_col_3.html">3 Columns</a></li>
-                      <li><a href="blog_grid_col_4.html">4 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Masonry</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="blog_grid_masonry_col_2.html">2 Columns</a></li>
-                      <li><a href="blog_grid_masonry_col_3.html">3 Columns</a></li>
-                      <li><a href="blog_grid_masonry_col_4.html">4 Columns</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Single</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="blog_single_left_sidebar.html">Left Sidebar</a></li>
-                      <li><a href="blog_single_right_sidebar.html">Right Sidebar</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Features</a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="alerts-and-wells.html"><i class="fa fa-bolt"></i> Alerts and Wells</a></li>
-                  <li><a href="buttons.html"><i class="fa fa-link fa-sm"></i> Buttons</a></li>
-                  <li><a href="tabs_and_accordions.html"><i class="fa fa-tasks"></i> Tabs &amp; Accordions</a></li>
-                  <li><a href="content_box.html"><i class="fa fa-list-alt"></i> Contents Box</a></li>
-                  <li><a href="forms.html"><i class="fa fa-check-square-o"></i> Forms</a></li>
-                  <li><a href="icons.html"><i class="fa fa-star"></i> Icons</a></li>
-                  <li><a href="progress-bars.html"><i class="fa fa-server"></i> Progress Bars</a></li>
-                  <li><a href="typography.html"><i class="fa fa-font"></i> Typography</a></li>
-                </ul>
-              </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Shop</a>
-                <ul class="dropdown-menu" role="menu">
-                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Product</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="shop_product_col_3.html">3 columns</a></li>
-                      <li><a href="shop_product_col_4.html">4 columns</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="shop_single_product.html">Single Product</a></li>
-                  <li><a href="shop_checkout.html">Checkout</a></li>
-                </ul>
-              </li>
-              
-              <li class="dropdown"><a class="dropdown-toggle" href="documentation.html" data-toggle="dropdown">Documentation</a>
-                <ul class="dropdown-menu">
-                  <li><a href="documentation.html#contact">Contact Form</a></li>
-                  <li><a href="documentation.html#reservation">Reservation Form</a></li>
-                  <li><a href="documentation.html#mailchimp">Mailchimp</a></li>
-                  <li><a href="documentation.html#gmap">Google Map</a></li>
-                  <li><a href="documentation.html#plugin">Plugins</a></li>
-                  <li><a href="documentation.html#changelog">Changelog</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div> -->
-        </div>
-      </nav>
-      <div class="main">
-        <section class="module bg-dark-60 about-page-header" data-background="assets/images/boatme2.jpg">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">About</h2>
-                <div class="module-subtitle font-serif"> This is Team 07's homepage.
-                    <p> Learn more about us below. </p></div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="module">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6">
-                <h5 class="font-alt">We are a group of student developers</h5><br/>
-                <p></p>
-                <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary.</p>
-              </div>
-             
-            </div>
-          </div>
-        </section>
-        <hr class="divider-w">
-        <section class="module" id="team">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Meet Our Team</h2>
-                <div class="module-subtitle font-serif">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3" onclick="wow fadeInUp">
-                <div class="team-item">
-                  <div class="team-image"><img src="jbekchanov2018\about\assets\img\profile-img.jpg" alt="Member Photo"/>
-                    <div class="team-detail">
-                        <p class="font-serif"><a href="jbekchanov2018\about\about.html">Click here to see my page</a></p>                     
-                    </div>
-                  </div>
-                  <div class="team-descr font-alt">
-                    <div class="team-name">Jakhongir Bekchanov</div>
-                    <div class="team-role">Product Owner</div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3" onclick="wow fadeInUp">
-                <div class="team-item">
-                  <div class="team-image"><img src="jlaine2018\about\AboutMe\images\IMG_0489.jpg" alt="Member Photo"/>
-                    <div class="team-detail">
-                      <p class="font-serif"><p class="font-serif"><a href="jlaine2018\about\AboutMe\About.html">Click here to see my page</a></p>
-                      
-                    </div>
-                  </div>
-                  <div class="team-descr font-alt">
-                    <div class="team-name"> Jonathan Laine</div>
-                    <div class="team-role">Scrum Master</div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3" onclick="wow fadeInUp">
-                <div class="team-item">
-                  <div class="team-image"><img src="assets\images\Zachary.png" alt="Member Photo"/>
-                    <div class="team-detail">
-                      <p class="font-serif"><a href="jbekchanov2018\about\about.html">Click here to see my page</a></p>
-                     
-                    </div>
-                  </div>
-                  <div class="team-descr font-alt">
-                    <div class="team-name">Zachary Astree
-</div>
-                    <div class="team-role">Web Developer</div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3" onclick="wow fadeInUp">
-                <div class="team-item">
-                  <div class="team-image"><img src="assets\images\boatme.jpg" alt="Member Photo"/>
-                    <div class="team-detail">
-                      <p class="font-serif"><a href="jbekchanov2018\about\about.html">Click here to see my page</a></p>
-                      
-                    </div>
-                  </div>
-                  <div class="team-descr font-alt">
-                    <div class="team-name">Hunter Grant
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
 
-</div>
-                    <div class="team-role">Software Developer</div>
-                  </div>
-                </div>
-              </div>
-            <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3" onclick="wow fadeInUp">
-                <div class="team-item">
-                  <div class="team-image"><img src="assets\images\boatme.jpg" alt="Member Photo"/>
-                    <div class="team-detail">
-                      <p class="font-serif"><a href="jbekchanov2018\about\about.html">Click here to see my page</a></p>
-                      
-                    </div>
-                  </div>
-                  <div class="team-descr font-alt">
-                    <div class="team-name">Abdullah Abumazen
+<body>
+     
+</body>
+</html> 
 
-</div>
-                    <div class="team-role">Software Developer</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        
-       
-        <hr class="divider-d">
-        <footer class="footer bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6">
-                <p class="copyright font-alt">&copy; 2017&nbsp;<a href="index.html">TitaN</a>, All Rights Reserved</p>
-              </div>
-              
-            </div>
-          </div>
-        </footer>
-      </div>
-      <div class="scroll-up"><a href="#totop"><i class="fa fa-angle-double-up"></i></a></div>
-    </main>
-    <!--  
-    JavaScripts
-    =============================================
-    -->
-    <script src="assets/lib/jquery/dist/jquery.js"></script>
-    <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/lib/wow/dist/wow.js"></script>
-    <script src="assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
-    <script src="assets/lib/isotope/dist/isotope.pkgd.js"></script>
-    <script src="assets/lib/imagesloaded/imagesloaded.pkgd.js"></script>
-    <script src="assets/lib/flexslider/jquery.flexslider.js"></script>
-    <script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script src="assets/lib/smoothscroll.js"></script>
-    <script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
-    <script src="assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
-</html>
