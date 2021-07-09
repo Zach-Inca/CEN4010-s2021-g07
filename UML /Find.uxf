@@ -1,37 +1,46 @@
-<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>70</x><y>200</y><w>110</w><h>190</h></coordinates><panel_attributes>Recipe
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>297</x><y>140</y><w>130</w><h>240</h></coordinates><panel_attributes>Recipe
 --
-Title 
+Title: String
 Special Equipment
-Description
-Ingredients
-Servings
-Cook Time
-Prep Time
-Cousine
-Instructions
-Media
-Notes</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>270</y><w>110</w><h>170</h></coordinates><panel_attributes>Users
+Description: String
+Ingredients: String
+Servings: int
+Cook Time: int
+Prep Time: int
+Cousine: String
+Instructions: String
+Notes: String
+Rating: int
 --
-Username
-Security Questions
-Phone Number
-Password
-Date of Birth
-First Name
-Last Name
-Location
-Email
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>550</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Stereotype&gt;&gt;
-Package::FatClass
-{Some Properties}
+Remove recipe()
+Create Recipe()
+Edit Recipe()
+Share Recipe(()
+Archive Recipe()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>7</x><y>140</y><w>170</w><h>280</h></coordinates><panel_attributes>User
 --
--id: Long {composite}
-_-ClassAttribute: Long_
+Username: String
+Security Questions: String
+Phone Number: int
+Password: int
+Date of Birth: int
+First Name: String
+Last Name: String
+Location:String
+Email: String
 --
-#Operation(i: int): int
-/+AbstractOperation()/
+login()
+create user()
+delete user()
+share user()
+edit user()
+view recipe()
+archive recipe()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>7</x><y>530</y><w>160</w><h>80</h></coordinates><panel_attributes>Comments
 --
-Responsibilities
--- Resp1
--- Resp2</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+Title: String
+Message: String
+Upvote/Downvote: Boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>167</x><y>200</y><w>150</w><h>40</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;10;130;10</additional_attributes></element><element><id>Relation</id><coordinates><x>77</x><y>410</y><w>50</w><h>140</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element></diagram>
