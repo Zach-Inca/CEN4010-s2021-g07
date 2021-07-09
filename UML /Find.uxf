@@ -10,7 +10,7 @@ Prep Time
 Cousine
 Instructions
 Media
-Notes</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>460</y><w>110</w><h>170</h></coordinates><panel_attributes>Users
+Notes</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>230</x><y>270</y><w>110</w><h>170</h></coordinates><panel_attributes>Users
 --
 Username
 Security Questions
@@ -22,4 +22,16 @@ Last Name
 Location
 Email
 
-</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>550</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+Package::FatClass
+{Some Properties}
+--
+-id: Long {composite}
+_-ClassAttribute: Long_
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+--
+Responsibilities
+-- Resp1
+-- Resp2</panel_attributes><additional_attributes></additional_attributes></element></diagram>
